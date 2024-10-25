@@ -1,5 +1,5 @@
 import React, { useState,useContext } from 'react'
-import Assets from '../../assets/assets.js'
+import assets from '../../assets/assets.js'
 import { Context } from '../../context/Context'
 
 
@@ -16,7 +16,7 @@ const SideBar = () => {
         <div className='top'>
             <img onClick={()=>setExtended(prev => !prev)} className='block w-5 ml-2 cursor-pointer menu' src={Assets.menu_icon} alt="logo" />
             <div onClick={()=>newChat()} className='inline-flex items-center gap-3 p-4 mt-8 text-base cursor-pointer new-chat bg-whitee-200 rounded-2xl text-slate-500 ' >
-                <img className='w-5'src={Assets.plus_icon} alt=""  />
+                <img className='w-5'src={assets.plus_icon} alt=""  />
                 {extended ? <p>New Chat</p> : null}
             </div>
             {extended ?<div className='flex flex-col recent'>
@@ -24,7 +24,7 @@ const SideBar = () => {
                 {prevPrompts.map((item, index)=>{
                     return(
                         <div onClick={()=>loadPrompt(item)} className='flex items-start gap-2 p-3 pr-10 cursor-pointer recent-entry rounded-3xl text-whitee-300 hover:bg-whitee-400'>
-                        <img className='w-5' src={Assets.message_icon} alt=""  />
+                        <img className='w-5' src={assets.message_icon} alt=""  />
                         <p >{item.slice(0,10)}...</p>
                         </div>
                         )
@@ -36,15 +36,15 @@ const SideBar = () => {
 
         <div className='flex flex-col bottom '>
             <div className='flex items-start gap-2 p-3 pr-5 cursor-pointer bottom-item recent-entry rounded-2xl text-whitee-300 hover:bg-whitee-400'>
-                <img className='w-5' src={Assets.question_icon} alt=""  />
+                <img className='w-5' src={assets.question_icon} alt=""  />
                 {extended?<p>Help</p> : null } 
             </div>
             <div className='flex items-start gap-2 p-3 pr-5 cursor-pointer bottom-item recent-entry rounded-2xl text-whitee-300 hover:bg-whitee-400'>
-                <img className='w-5' src={Assets.history_icon} alt=""  />
+                <img className='w-5' src={assets.history_icon} alt=""  />
                 {extended?<p>Activity</p> : null } 
             </div>
             <div className='flex items-start gap-2 p-3 pr-5 cursor-pointer bottom-item recent-entry rounded-2xl text-whitee-300 hover:bg-whitee-400'>
-                <img className='w-5' src={Assets.setting_icon} alt=""  />
+                <img className='w-5' src={assets.setting_icon} alt=""  />
                 {extended?<p>Settings</p> : null } 
                 <label className="ml-2">
                     <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode} />

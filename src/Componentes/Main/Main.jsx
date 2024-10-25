@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Assets } from '../../assets/assets.js'
+import assets from '../../assets/assets.js'
 import { Context } from '../../context/Context'
 import './Main.css'
 
@@ -26,38 +26,38 @@ const Main = () => {
                     <p className='text-[#585858] text-lg '>
                         Suggest some of the best travel places in the world.
                     </p>
-                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={Assets.compass_icon} alt=""  />
+                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={assets.compass_icon} alt=""  />
                 </div>
                 <div className="card h-[200px] p-[15px] bg-whitee-700 rounded-[10px] relative cursor-pointer hover:bg-[#dfe4ea]">
                     <p className='text-[#585858] text-lg '>
                         Summarize the concept: urban planning.
                     </p>
-                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={Assets.bulb_icon} alt=""  />
+                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={assets.bulb_icon} alt=""  />
                 </div>
                 <div className="card h-[200px] p-[15px] bg-whitee-700 rounded-[10px] relative cursor-pointer hover:bg-[#dfe4ea]">
                     <p className='text-lg text-[#585858]'>
                         brain strom team bonding activites for work retreat.
                     </p>
-                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={Assets.message_icon} alt=""  />
+                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={assets.message_icon} alt=""  />
                 </div>
                 <div className="card h-[200px] p-[15px] bg-whitee-700 rounded-[10px] relative cursor-pointer hover:bg-[#dfe4ea]">
                     <p className='text-[#585858] text-lg '>
                         Improve readability of the given code.
                     </p>
-                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={Assets.code_icon} alt=""  />
+                    <img className='absolute p-1 bg-white w-9 rounded-3xl bottom-2 right-2' src={assets.code_icon} alt=""  />
                 </div>
             </div>
             </>
             :
             <div className=" px-3 max-h-[70vh] result overflow-y-scroll ">
                 <div className="flex items-center gap-5 my-10 res-title">
-                    <img className='w-10 rounded-full' src={Assets.user_icon} alt="" srcset="" />
+                    <img className='w-10 rounded-full' src={assets.user_icon} alt="" srcset="" />
                     <p>
                         {recentPrompt}
                     </p>
                 </div>
                 <div className="flex items-start gap-5 res-data">
-                    <img className='w-10 rounded-full' src={Assets.gemini_icon} alt="" srcset="" />
+                    <img className='w-10 rounded-full' src={assets.gemini_icon} alt="" srcset="" />
                     {loading ?
                     <div className="flex flex-col w-full gap-2 loader">
                         <hr />
@@ -81,9 +81,9 @@ const Main = () => {
                                    onSent(); }} }
                              />
                     <div className='flex items-center gap-4'>
-                        <img className="w-6 cursor-pointer " src={Assets.gallery_icon} alt=""  />
-                        <img className="w-6 cursor-pointer" src={Assets.mic_icon} alt=""  />
-                        <img onClick={()=> onSent()} className="w-6 cursor-pointer" src={Assets.send_icon} alt=""  />
+                        <img className="w-6 cursor-pointer " src={assets.gallery_icon} alt=""  />
+                        <img className="w-6 cursor-pointer" src={assets.mic_icon} alt=""  />
+                        <img onClick={()=> onSent()} className="w-6 cursor-pointer" src={assets.send_icon} alt=""  />
                     </div>
                 </div>
                 <p className='bottom-info text-sm mx-auto my-4 text-center text-[#585858] font-light'>
