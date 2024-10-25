@@ -14,7 +14,7 @@ const SideBar = () => {
   return (
     <div className={`sidebar pl-5 pr-3 py-4 min-h-screen inline-flex flex-col justify-between bg-whitee-100 transition-all duration-300 ${extended ? 'w-64' : 'min-w-5'}`}>
         <div className='top'>
-            <img onClick={()=>setExtended(prev => !prev)} className='block w-5 ml-2 cursor-pointer menu' src={Assets.menu_icon} alt="logo" />
+            <img onClick={()=>setExtended(prev => !prev)} className='block w-5 ml-2 cursor-pointer menu' src={assets.menu_icon} alt="logo" />
             <div onClick={()=>newChat()} className='inline-flex items-center gap-3 p-4 mt-8 text-base cursor-pointer new-chat bg-whitee-200 rounded-2xl text-slate-500 ' >
                 <img className='w-5'src={assets.plus_icon} alt=""  />
                 {extended ? <p>New Chat</p> : null}

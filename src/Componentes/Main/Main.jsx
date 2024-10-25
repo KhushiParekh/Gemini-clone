@@ -12,7 +12,7 @@ const Main = () => {
 
         <div className="flex items-center justify-between p-5 text-2xl text-whitee-500">
             <p>Gemini</p>
-            <img className='w-10 rounded-full' src={Assets.user_icon} alt=""  />
+            <img className='w-10 rounded-full' src={assets.user_icon} alt=""  />
         </div>
         <div className="main-cont m-auto max-w-[900px]">
             {!showResult ? 
